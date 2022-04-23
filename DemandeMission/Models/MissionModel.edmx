@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MissionModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MISSION">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOM" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="PRÉNOM" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="N°_PASSEPORT" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NATIONALITÉ" Type="varchar2" MaxLength="30" Nullable="false" />
+          <Property Name="FONCTION" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="TITRE/EQUIPE" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="MOTIF_DE_MISSION" Type="varchar2" MaxLength="100" Nullable="false" />
+          <Property Name="INTITULÉ_DE_MISSION" Type="varchar2" MaxLength="100" Nullable="false" />
+          <Property Name="DATE__DÉPART" Type="date" Nullable="false" />
+          <Property Name="DATE_RETOUR" Type="date" Nullable="false" />
+          <Property Name="OBJET_DE_MISSION" Type="varchar2" MaxLength="200" Nullable="false" />
+          <Property Name="TELEPHONE" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="STATUS" Type="varchar2" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="MissionModelStoreContainer">
+          <EntitySet Name="MISSION" EntityType="Self.MISSION" Schema="RH" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MissionModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MISSION">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRÉNOM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="N__PASSEPORT" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NATIONALITÉ" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FONCTION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TITRE_EQUIPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MOTIF_DE_MISSION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="INTITULÉ_DE_MISSION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DATE__DÉPART" Type="DateTime" Nullable="false" />
+          <Property Name="DATE_RETOUR" Type="DateTime" Nullable="false" />
+          <Property Name="OBJET_DE_MISSION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TELEPHONE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STATUS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Mission_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MISSIONs" EntityType="Self.MISSION" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MissionModelStoreContainer" CdmEntityContainer="Mission_Entities">
+          <EntitySetMapping Name="MISSIONs">
+            <EntityTypeMapping TypeName="MissionModel.MISSION">
+              <MappingFragment StoreEntitySet="MISSION">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOM" ColumnName="NOM" />
+                <ScalarProperty Name="PRÉNOM" ColumnName="PRÉNOM" />
+                <ScalarProperty Name="N__PASSEPORT" ColumnName="N°_PASSEPORT" />
+                <ScalarProperty Name="NATIONALITÉ" ColumnName="NATIONALITÉ" />
+                <ScalarProperty Name="FONCTION" ColumnName="FONCTION" />
+                <ScalarProperty Name="TITRE_EQUIPE" ColumnName="TITRE/EQUIPE" />
+                <ScalarProperty Name="MOTIF_DE_MISSION" ColumnName="MOTIF_DE_MISSION" />
+                <ScalarProperty Name="INTITULÉ_DE_MISSION" ColumnName="INTITULÉ_DE_MISSION" />
+                <ScalarProperty Name="DATE__DÉPART" ColumnName="DATE__DÉPART" />
+                <ScalarProperty Name="DATE_RETOUR" ColumnName="DATE_RETOUR" />
+                <ScalarProperty Name="OBJET_DE_MISSION" ColumnName="OBJET_DE_MISSION" />
+                <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

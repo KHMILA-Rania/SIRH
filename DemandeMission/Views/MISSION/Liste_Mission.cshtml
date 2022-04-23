@@ -1,0 +1,112 @@
+﻿@model IEnumerable<DemandeMission.Models.MISSION>
+
+@{
+    ViewBag.Title = "Mission";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRÉNOM)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.N__PASSEPORT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NATIONALITÉ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FONCTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TITRE_EQUIPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MOTIF_DE_MISSION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INTITULÉ_DE_MISSION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATE__DÉPART)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATE_RETOUR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OBJET_DE_MISSION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELEPHONE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.STATUS)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRÉNOM)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.N__PASSEPORT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NATIONALITÉ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FONCTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TITRE_EQUIPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOTIF_DE_MISSION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INTITULÉ_DE_MISSION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATE__DÉPART)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATE_RETOUR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OBJET_DE_MISSION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEPHONE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAIL)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.STATUS)
+        </td>
+        <td>
+            @Html.ActionLink("Treat", "Treat", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

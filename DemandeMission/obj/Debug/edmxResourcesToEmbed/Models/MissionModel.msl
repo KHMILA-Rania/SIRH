@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MissionModelStoreContainer" CdmEntityContainer="Mission_Entities">
+    <EntitySetMapping Name="MISSIONs">
+      <EntityTypeMapping TypeName="MissionModel.MISSION">
+        <MappingFragment StoreEntitySet="MISSION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOM" ColumnName="NOM" />
+          <ScalarProperty Name="PRÉNOM" ColumnName="PRÉNOM" />
+          <ScalarProperty Name="N__PASSEPORT" ColumnName="N°_PASSEPORT" />
+          <ScalarProperty Name="NATIONALITÉ" ColumnName="NATIONALITÉ" />
+          <ScalarProperty Name="FONCTION" ColumnName="FONCTION" />
+          <ScalarProperty Name="TITRE_EQUIPE" ColumnName="TITRE/EQUIPE" />
+          <ScalarProperty Name="MOTIF_DE_MISSION" ColumnName="MOTIF_DE_MISSION" />
+          <ScalarProperty Name="INTITULÉ_DE_MISSION" ColumnName="INTITULÉ_DE_MISSION" />
+          <ScalarProperty Name="DATE__DÉPART" ColumnName="DATE__DÉPART" />
+          <ScalarProperty Name="DATE_RETOUR" ColumnName="DATE_RETOUR" />
+          <ScalarProperty Name="OBJET_DE_MISSION" ColumnName="OBJET_DE_MISSION" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <style>
+                * {
+                    margin: 0;
+                    padding: 0;
+                }
+                /*
+        body {
+          font-family: Rubik;
+          overflow-x: hidden;
+        }*/
+
+
+                nav {
+                    display: flex;
+                    background-color: darkred;
+                    justify-content: space-around;
+                    padding: 20px 0;
+                    color: rgb(255, 254, 254);
+                    align-items: center;
+                }
+
+                    nav.logo {
+                        letter-spacing: 3px;
+                        width: auto;
+                        justify-content: flex-start;
+                    }
+
+                    nav ul {
+                        display: flex;
+                        list-style: none;
+                        width: 30%;
+                        justify-content: space-between;
+                    }
+
+                        nav ul li a {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 1em;
+                            text-decoration: none;
+                            font-family: 'Agency FB';
+                        }
+
+
+                       
+
+
+
+
+
+                        nav ul.slide {
+                            transform: translateX(0);
+                        }
+    </style>
+
+   
+    <nav>
+        <div class="logo">
+            <h2><img src="files/Logo-ESPRIT.png" /></h2>
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        @*<div class="menu-bars">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>*@
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>@*&copy;*@ @*@DateTime.Now.Year -*@ Contact us : contact@esprit.ens.tn|(+216) 71 94 15 41| (+216) 71 94 18 89</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

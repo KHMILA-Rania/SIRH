@@ -1,0 +1,136 @@
+﻿@model DemandeMission.Models.MISSION
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MISSION</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRÉNOM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRÉNOM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.N__PASSEPORT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N__PASSEPORT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NATIONALITÉ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NATIONALITÉ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FONCTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FONCTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TITRE_EQUIPE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TITRE_EQUIPE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MOTIF_DE_MISSION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MOTIF_DE_MISSION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INTITULÉ_DE_MISSION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INTITULÉ_DE_MISSION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATE__DÉPART)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATE__DÉPART)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATE_RETOUR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATE_RETOUR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OBJET_DE_MISSION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OBJET_DE_MISSION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEPHONE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEPHONE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUS)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
